@@ -1,14 +1,26 @@
-<DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-<title>Моя практична</title>
-<meta charset="utf-8"/>
-<head>
-<body>
-<p><b>Мене звуть:</b> <u>Ваше ім'я</u> </p>
-<p><i>Ми найкращі</i> </p>
-<p> <strike>html це мова програмування</strike>  </p>
-<p><b>Ми любимо математику</b></p> 
-<p>X<sup>2</sup>=1</p>
-</body>
+	<head>
+		<title>Завдання JS</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Скылько років у цих днях?</h1>
+		<p>задайте кылькість років <input name="day" id="day" type="text" value="365"></p>
+		<p><label name="Year" id="Year">Рядки</label></p>
+		<input type="button" id="DoSm" value="Розрахувати">
+		<script>
+		DoSm.onclick =  function() {
+				var DayVal=document.getElementById('day').value;
+				var Rez=0;
+				if(DayVal>=365){
+					Rez=DayVal/365;
+				}
+				else{
+					Rez="Значення має бути числовим та більше 365!";
+				}
+				document.getElementById('Year').innerHTML = Rez;
+		}
+		</script>
+	</body>
 </html>
